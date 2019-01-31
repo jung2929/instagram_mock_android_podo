@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".AddPhotoActivity"></activity>
+        <activity android:name=".CommentActivity"></activity>
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
         <activity android:name="com.facebook.FacebookActivity"
