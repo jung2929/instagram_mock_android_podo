@@ -7,7 +7,7 @@
     android:orientation="vertical">
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginHorizontal="20dp"
         android:src="@drawable/instagram_logo"/>
     <TextView
@@ -16,25 +16,55 @@
         android:textSize="17dp"
         android:layout_marginBottom="20dp"
         android:text="@string/signup_message"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="left"
+        android:text="email"/>
     <EditText
         android:id="@+id/signup_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:hint="@string/email"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="left"
+        android:text="name"/>
     <EditText
         android:id="@+id/signup_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-
-        android:hint="name"/>
+        android:hint="Name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="left"
+        android:text="id"/>
+    <EditText
+        android:id="@+id/signup_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:hint="ID"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="left"
+        android:text="password"/>
     <EditText
         android:id="@+id/signup_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:hint="@string/password"/>
+
     <Button
         android:id="@+id/signup_button"
         android:layout_width="match_parent"
