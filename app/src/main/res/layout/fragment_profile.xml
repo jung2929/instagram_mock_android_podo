@@ -85,6 +85,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/follower_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -95,6 +96,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="@string/follower" />
+
                         <TextView
                             android:id="@+id/account_tv_follower_count"
                             android:layout_width="wrap_content"
@@ -124,7 +126,7 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <com.example.a82102.insta.ExpandableHeightGridView
+            <com.example.a82102.insta.Profile.ExpandableHeightGridView
                 android:id="@+id/account_gridview"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"

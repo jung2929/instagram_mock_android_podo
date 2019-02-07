@@ -3,6 +3,8 @@
     package="com.example.a82102.insta">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <!--사진의 접근권한을 위한 퍼미션-->
 
     <application
@@ -12,17 +14,17 @@
         android:roundIcon="@mipmap/app_insta_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".AddPhotoActivity"></activity>
-        <activity android:name=".CommentActivity"></activity>
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".AddPhoto.AddPhotoActivity"></activity>
+        <activity android:name=".Home.CommentActivity"></activity>
+        <activity android:name=".Login.SignUpActivity"></activity>
+        <activity android:name=".Profile.FollowActivity"></activity>
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
         <activity android:name="com.facebook.FacebookActivity"
