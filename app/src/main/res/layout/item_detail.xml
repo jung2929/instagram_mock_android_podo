@@ -23,7 +23,14 @@
             android:id="@+id/detailviewitem_profile_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             tools:text="User Name" />
+        <TextView
+            android:id="@+id/detailviewitem_postNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            tools:text="postNumber" />
     </LinearLayout>
     <!-- Content ImageView -->
     <ImageView
@@ -40,16 +47,25 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="8dp">
+
         <ImageView
             android:id="@+id/detailviewitem_favorite_imageview"
             android:layout_width="35dp"
             android:layout_height="35dp"
             app:srcCompat="@drawable/ic_favorite_border" />
+
         <ImageView
             android:id="@+id/detailviewitem_comment_imageview"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:src="@drawable/ic_chat_black" />
+        <TextView
+            android:id="@+id/detailviewitem_timeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="postNumber" />
+
     </LinearLayout>
     <!--수정삭제버튼추가-->
     <TextView
@@ -65,4 +81,5 @@
         android:layout_marginBottom="35dp"
         android:layout_marginLeft="8dp"
         tools:text="사진 내용" />
+
 </LinearLayout>
