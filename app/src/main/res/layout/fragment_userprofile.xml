@@ -3,49 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/profile_container"
     android:orientation="vertical">
 
-    <!-- Toolbar -->
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/toolbar_title_image"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/instagram_logo"
-                android:layout_weight="1"
-                android:visibility="visible" />
-
-            <ImageView
-                android:id="@+id/account_btn_follow_signout"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_logout"
-                android:scaleType="fitCenter"
-                android:text="@string/signout" />
-        </LinearLayout>
-    </android.support.v7.widget.Toolbar>
-    <!--툴바와 중앙화면을 나누는 선-->
-    <LinearLayout
-        android:id="@+id/toolbar_division"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/my_toolbar"
-        android:background="@color/colorDivision"
-        android:orientation="horizontal" />
+    <include
+        android:id="@+id/userprofile_toolbar"
+        layout="@layout/toolbar_userprofile" />
 
     <ScrollView
-        android:id="@+id/scrollview_profile"
+        android:id="@+id/scrollview_userprofile"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -55,12 +20,12 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/profile_relativelayout"
+                android:id="@+id/userinfo_relativelayout"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -72,34 +37,38 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/account_iv_profile"
+                        android:id="@+id/userprofile_profile_iv"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_alignParentLeft="true"
                         android:background="@android:color/holo_green_light"
                         android:contentDescription="@string/profile"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                         />
+
+
 
                 </LinearLayout>
 
-
                 <Button
-                    android:id="@+id/profile_btn_update"
+                    android:id="@+id/userprofile_follow_btn"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="8dp"
                     android:layout_toRightOf="@id/container_profile"
-                    android:text="프로필 수정"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/follow"
+                    android:textColor="@color/colorBlack"
                     android:theme="@style/ButtonStyle" />
 
                 <LinearLayout
+                    android:id="@+id/pofofo_linearlayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_above="@id/profile_btn_update"
-                    android:layout_marginEnd="8dp"
+                    android:layout_above="@id/userprofile_follow_btn"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_toRightOf="@id/container_profile"
                     android:baselineAligned="true"
                     android:gravity="center"
@@ -119,7 +88,7 @@
                             android:text="@string/post" />
 
                         <TextView
-                            android:id="@+id/account_tv_post_count"
+                            android:id="@+id/userprofile_postcount_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/count_0"
@@ -127,7 +96,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/follower_layout"
+                        android:id="@+id/userprofile_follower_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -141,7 +110,7 @@
                             android:text="@string/follower" />
 
                         <TextView
-                            android:id="@+id/account_tv_follower_count"
+                            android:id="@+id/userprofile_follower_count_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/count_0"
@@ -149,7 +118,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/following_layout"
+                        android:id="@+id/userprofile_following_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -163,58 +132,50 @@
                             android:text="@string/following" />
 
                         <TextView
-                            android:id="@+id/account_tv_following_count"
+                            android:id="@+id/userprofile_following_count_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/count_0"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
+
             </RelativeLayout>
-
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
                 <TextView
-                    android:id="@+id/account_profile_name_edittext"
+                    android:id="@+id/userprofile_profilename_tv"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10dp"
-                    android:background="#EEEEEE"
-                    android:hint="user_name"
-                    android:textColor="@android:color/black" />
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@android:color/black"
+                    android:text="user_name" />
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/profile_introduction_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/profile_relativelayout"
-                android:orientation="horizontal">
-
+                android:layout_below="@+id/userinfo_relativelayout">
                 <TextView
-                    android:id="@+id/profile_introduction_edittext"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/userprofile_introduction_textview"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="introduction"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:hint="introduction"
-                    android:textColor="@android:color/black" />
-
+                    android:textColor="@android:color/black"
+                    />
             </LinearLayout>
-
             <com.example.a82102.insta.Profile.view.ExpandableHeightGridView
-                android:id="@+id/account_gridview"
+                android:id="@+id/userprofile_gridview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:horizontalSpacing="3dp"
                 android:isScrollContainer="false"
                 android:numColumns="3"
-                android:paddingBottom="3dp"
                 android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:scrollbars="none"
                 android:verticalSpacing="3dp" />
         </LinearLayout>

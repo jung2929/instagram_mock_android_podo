@@ -23,7 +23,7 @@
         <activity android:name=".Home.CommentActivity"></activity>
         <activity android:name=".Login.SignUpActivity"></activity>
         <activity android:name=".Profile.FollowActivity"></activity>
-
+        <activity android:name=".Profile.UpdateProfileActivity"></activity>
         <!--<activity android:name=".Profile.FollowActivity"></activity>-->
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>

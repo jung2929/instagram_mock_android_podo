@@ -5,38 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <!-- Toolbar -->
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:layout_alignParentTop="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-            <ImageView
-                android:id="@+id/toolbar_title_image"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:src="@drawable/instagram_logo"/>
-        </LinearLayout>
-    </android.support.v7.widget.Toolbar>
-
-
-    <!--툴바와 중앙화면을 나누는 선-->
-    <LinearLayout
-        android:id="@+id/toolbar_division"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/my_toolbar"
-        android:background="@color/colorDivision"
-        android:orientation="horizontal" />
-
     <!-- 중앙 화면 -->
     <FrameLayout
         android:id="@+id/main_content"
@@ -52,16 +20,74 @@
         android:layout_above="@id/bottom_navigation"
         android:background="@color/colorDivision"
         android:orientation="horizontal" />
-
-    <!-- Bottom Navigation View -->
-    <android.support.design.widget.BottomNavigationView
+    <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@color/colorNavIcon"
-        app:itemTextColor="@color/colorNavIcon"
-        app:menu="@menu/bottom_navigation_main" />
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="25dp"
+            android:layout_marginVertical="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tab_home2" />
+        <ImageView
+            android:id="@+id/tab_search"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="25dp"
+            android:layout_marginVertical="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tab_search1" />
+        <ImageView
+            android:id="@+id/tab_add_photo"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="25dp"
+            android:layout_marginVertical="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tab_post" />
+
+        <ImageView
+            android:id="@+id/tab_alarm"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/tab_heart1" />
+        <ImageView
+            android:id="@+id/tab_profile"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="25dp"
+            android:layout_marginVertical="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tab_profile1" />
+
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation View -->
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/bottom_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--app:itemBackground="@color/colorPrimary"-->
+        <!--app:itemIconTint="@color/colorNavIcon"-->
+        <!--app:itemTextColor="@color/colorNavIcon"-->
+        <!--app:layout_behavior="tech.thdev.app.view.BottomNavigationBehavior"-->
+        <!--app:menu="@menu/bottom_navigation_main" />-->
 
 </RelativeLayout>

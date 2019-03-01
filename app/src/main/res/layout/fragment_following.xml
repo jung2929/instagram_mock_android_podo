@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <!--좋아요와 댓글알림-->
     <ListView
         android:id="@+id/following_listview"

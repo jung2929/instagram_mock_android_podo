@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/userprofile_backButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_arrow_back" />
+
+            <ImageView
+                android:id="@+id/toolbar_title_image"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/userprofile_backButton"
+                android:src="@drawable/instagram_logo"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/userprofile_logout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_logout"
+                android:visibility="invisible"
+                android:text="@string/signout" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <!--툴바와 중앙화면을 나누는 선-->
+    <LinearLayout
+        android:id="@+id/toolbar_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/my_toolbar"
+        android:background="@color/colorDivision"
+        android:orientation="horizontal" />
+</LinearLayout>

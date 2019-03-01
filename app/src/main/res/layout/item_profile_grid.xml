@@ -9,6 +9,7 @@
         android:id="@+id/user_profile_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_foreground"/>
     <TextView
         android:id="@+id/uesr_id_text"

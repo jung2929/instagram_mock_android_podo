@@ -3,6 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <include layout="@layout/toolbar"/>
+
     <GridView
         android:id="@+id/searchfragment_gridview"
         android:layout_width="match_parent"

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--게시물의 상세정보-->
+
+    <!-- Title Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/feeditem_profile_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="7.5dp"
+            android:background="@android:color/holo_blue_light"
+            tools:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/feeditem_username_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            tools:text="User Name" />
+
+        <ImageView
+            android:id="@+id/feeditem_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/feed_menu2" />
+        <!--<ImageView-->
+            <!--android:id="@+id/feeditem_menu"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:src="@drawable/feed_menu"/>-->
+
+
+    </LinearLayout>
+    <!-- Content ImageView -->
+    <ImageView
+        android:id="@+id/feeditem_feed_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#EEE"
+        android:scaleType="centerCrop" />
+    <!--android:src="@color/com_facebook_blue"-->
+
+    <!-- favorite & comment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:id="@+id/feeditem_favorite_imageview"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_favorite_border" />
+
+        <ImageView
+            android:id="@+id/feeditem_comment_imageview"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chat_black" />
+
+        <TextView
+            android:id="@+id/feeditem_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            tools:text="yyyy-MM-dd hh:mm:ss" />
+        <TextView
+            android:id="@+id/feeditem_feednum_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            tools:text="postNumber" />
+
+    </LinearLayout>
+    <!--수정삭제버튼추가-->
+    <LinearLayout
+        android:id="@+id/feeditem_like_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋아요 "
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feeditem_likecounter_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="명" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/feeditem_content_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="35dp"
+        android:textColor="@android:color/black"
+        tools:text="사진 내용" />
+
+
+</LinearLayout>
